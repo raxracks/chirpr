@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chirpr</title>
+	<script src="/assets/js/like.js"></script>
+	<script src="/assets/js/alpine.js" defer></script>
+
+	<link rel="stylesheet" href="/assets/css/home.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body x-data="{ posts: [] }" x-init="posts = await (await fetch('/api/v1/posts')).json()">
+	<div class="posts">
+		<template x-for="post in posts">
+			<div class="post">
+				<a class="author" x-text="post.username" x-bind:href="`/users/${post.author}`"></a>
+				<div x-text="post.body" class="body"></div>
+				<div class="post-bottom">
+					<a href="#" @click="like(post.id)">
+						<i class="material-icons thumbs-up">favorite</i>
+						<span x-text="post.likes"></span>
+					</a>
+				</div>
+			</div>
+		</template>
+	</div>
+</body>
+
+</html>
