@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/chirpr/backend/pages"
-	"github.com/chirpr/backend/posts"
-	"github.com/chirpr/backend/users"
+	"github.com/raxracks/chirpr/frontend/pages"
+	"github.com/raxracks/chirpr/posts"
+	"github.com/raxracks/chirpr/users"
 	"github.com/gofiber/fiber/v2"
 	_ "modernc.org/sqlite"
 )

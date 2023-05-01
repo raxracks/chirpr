@@ -1,4 +1,4 @@
-module github.com/chirpr/backend
+module github.com/raxracks/chirpr
 
 go 1.20
 
