@@ -3,6 +3,49 @@ html, body {
 	font-family: 'Lexend', sans-serif;
 }
 
+button {
+	cursor: pointer;
+}
+
+.post-button {
+	display: flex;
+  align-items: center;
+}
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+	padding: 15px;
+	margin: 5px;
+	background: #f3f6fc;
+	border-radius: 15px;
+	border: 1px solid #bdbdbd;
+}
+
+.new-post-bottom {
+	display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+	margin-top: 10px;
+}
+
+.new-post-bottom button {
+	padding: 10px;
+	background: white;
+	border: 1px solid #bdbdbd;
+	border-radius: 10px;
+	font-size: 1em;
+	font-family: 'Lexend', sans-serif;
+}
+
+.post-textarea {
+	padding: 10px;
+	border: 1px solid #bdbdbd;
+	border-radius: 10px;
+	height: fit-content;
+	background: white;
+}
+
 .posts {
 	display: flex;
   flex-direction: column;
@@ -39,21 +82,26 @@ html, body {
 	margin-right: 5px;
 }
 
-.post-bottom {
-	font-size: 1em;
-	display: flex;
-	background: white;
-	border-radius: 10px;
-	padding: 10px;
-	margin-top: 10px;
-	width: fit-content;
-	border: 1px solid #bdbdbd;
+.send-icon {
+	font-size: 1em !important;
+	margin-left: 5px;
 }
 
-.post-bottom a {
+.post-bottom {
+	display: flex;
+	margin-top: 10px;
+}
+
+.post-bottom button {
 	text-decoration: none;
 	color: black;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	width: fit-content;
+	border: 1px solid #bdbdbd;
+	background: white;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 1em;
 }
